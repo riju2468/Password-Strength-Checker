@@ -23,7 +23,7 @@ A modern and responsive Password Strength Checker and Password Generator built u
 
 ## 📸 Screenshot
 
-![Homepage](Screenshot/homepage.png)
+![Homepage](Screenshot/homepage.png.png)
 
 ---
 
