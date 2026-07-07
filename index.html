@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <button class="btn-header" id="btn-generate">Generate Password</button>
+      <button class="btn-header" id="btn-generate-name">Generate Password from name</button>
+    </div>
+
+    <div class="main-content">
+      <h1 class="title">Check Password Strength</h1>
+      
+      <div class="input-section">
+        <div class="password-wrapper">
+          <input type="password" id="pwd-input" class="pwd-input" placeholder="Enter  Password">
+          <button type="button" class="toggle-password" id="toggle-password">👁️</button>
+        </div>
+        <button class="btn-check" id="btn-check">Check</button>
+      </div>
+
+      <div class="progress">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+
+      <div id="result" class="result"></div>
+
+      <div class="requirements">
+        <div class="requirement-title">Password must include :</div>
+        <div class="requirement-item">
+          <span>At least 8 character</span>
+          <span id="check-length" class="icon">✗</span>
+        </div>
+        <div class="requirement-item">
+          <span>An uppercase letter</span>
+          <span id="check-upper" class="icon">✗</span>
+        </div>
+        <div class="requirement-item">
+          <span>A lowercase letter</span>
+          <span id="check-lower" class="icon">✗</span>
+        </div>
+        <div class="requirement-item">
+          <span>A digit</span>
+          <span id="check-digit" class="icon">✗</span>
+        </div>
+        <div class="requirement-item">
+          <span>A Special Character</span>
+          <span id="check-special" class="icon">✗</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Generate Password Modal -->
+    <div id="generate-modal" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Generate Strong Password</h2>
+          <button class="close-btn" id="close-modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <label>Password Length:</label>
+          <input type="number" id="password-length" class="input-field" value="16" min="8" max="128">
+          <button class="btn-primary" id="gen-strong">Generate</button>
+          <div id="generated-password" class="generated-password"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Generate from Name Modal -->
+    <div id="name-modal" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Generate Password from Name</h2>
+          <button class="close-btn" id="close-modal-name">&times;</button>
+        </div>
+        <div class="modal-body">
+          <label>Enter Name:</label>
+          <input type="text" id="name-input" class="input-field" placeholder="Your name">
+          <button class="btn-primary" id="gen-name">Generate</button>
+          <div id="generated-from-name" class="generated-password"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
